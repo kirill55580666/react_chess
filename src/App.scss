@@ -6,6 +6,9 @@ $cell: 64px;
 $cell_white: #f0d9b5;
 $cell_black: #B58863;
 
+$figure_width: calc(#{$cell} * (2 / 3));
+$figure_height: calc(#{$cell} * (2 / 3));
+
 $board_width: calc(#{$cell} * 8);
 $board_height: calc(#{$cell} * 8);
 
@@ -31,6 +34,11 @@ $board_height: calc(#{$cell} * 8);
   display: flex;
   justify-content: center;
   align-items: center;
+  img {
+    width: $figure_width;
+    height: $figure_height;
+    position: relative;
+  }
 }
 
 .black {
@@ -39,4 +47,15 @@ $board_height: calc(#{$cell} * 8);
 
 .white {
   background-color: $cell_white;
+}
+
+.selected {
+  background-color: brown;
+}
+
+.available {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #22c022;
 }
