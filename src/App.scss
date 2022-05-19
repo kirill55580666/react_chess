@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+}
+
+$cell: 64px;
+$cell_white: #f0d9b5;
+$cell_black: #B58863;
+
+$board_width: calc(#{$cell} * 8);
+$board_height: calc(#{$cell} * 8);
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  border: 2px solid black;
+  width: $board_width;
+  height: $board_height;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  width: $cell;
+  height: $cell;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.black {
+  background-color: $cell_black;
+}
+
+.white {
+  background-color: $cell_white;
+}
